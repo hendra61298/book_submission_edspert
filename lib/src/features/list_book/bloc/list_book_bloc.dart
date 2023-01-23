@@ -19,8 +19,13 @@ class ListBookBloc extends Bloc<ListBookEvent, ListBookState>{
       Emitter<ListBookState> emit
       )async {
     emit(ListBookStateLoading());
-    Result<List<Book>> listBook= await _bookDataSource.getAllBook();
-    emit(ListBookStateSuccess(listBook.data!));
+    try{
+      Result<List<Book>> listBook= await _bookDataSource.getAllBook();
+      emit(ListBookStateSuccess(listBook.data!));
+    }catch (e){
+      emit(ListBookStateError(err: e));
+    }
+
   }
 
 }

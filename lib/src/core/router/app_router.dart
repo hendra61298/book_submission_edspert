@@ -1,4 +1,8 @@
 import 'package:book_submission_edspert/src/data/datasource/BookDataSource.dart';
+import 'package:book_submission_edspert/src/features/detail_book/bloc/detail_book_bloc.dart';
+import 'package:book_submission_edspert/src/features/detail_book/bloc/detail_book_event.dart';
+import 'package:book_submission_edspert/src/features/detail_book/bloc/detail_book_state.dart';
+import 'package:book_submission_edspert/src/features/detail_book/detail_book_screen.dart';
 import 'package:book_submission_edspert/src/features/list_book/bloc/list_book_bloc.dart';
 import 'package:book_submission_edspert/src/features/list_book/bloc/list_book_event.dart';
 import 'package:book_submission_edspert/src/features/list_book/list_book_screen.dart';
@@ -59,6 +63,21 @@ class AppRouter {
                   return const WalkthroughScreen();
                 }
             ),
-
+            GoRoute(
+                path: AppRoute.detailBookScreen.path,
+                name: AppRoute.detailBookScreen.name,
+              pageBuilder: (context, state) =>
+                  CustomTransitionPage<void>(
+                    key: state.pageKey,
+                    child: BlocProvider(
+                      create: (context) => DetailBookBloc(bookDataSource)..add(DetailBookEventGetDetail(state.params['isbn13'].toString())),
+                      child: const DetailBookScreen(),
+                    ),
+                    transitionsBuilder: (context, animation, secondaryAnimation,
+                        child) =>
+                        ScaleTransition(scale: animation,
+                            child: child),
+                  ),
+            ),
           ]);
 }

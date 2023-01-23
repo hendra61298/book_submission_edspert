@@ -29,14 +29,12 @@ class BookCard extends StatelessWidget {
     }
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 400 ,
       child: Padding(
-        padding: EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10.0),
         child: Card(
           elevation: 4,
           color: Colors.white70,

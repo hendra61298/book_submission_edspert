@@ -16,6 +16,6 @@ class Book with _$Book{
     required Uri url,
   })= _Book;
 
-  factory Book.fromJson(Map<String, dynamic> json) => _$BookFromJson(json);
+   factory Book.fromJson(Map<String, dynamic> json) => _$BookFromJson(json);
 
 }

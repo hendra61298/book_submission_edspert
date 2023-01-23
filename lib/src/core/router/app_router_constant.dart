@@ -28,7 +28,7 @@ extension AppRouteExtension on AppRoute{
       case AppRoute.listBookScreen:
         return '/';
       case AppRoute.detailBookScreen:
-        return '/detail/book';
+        return '/detail/book/:isbn13';
     }
   }
 }

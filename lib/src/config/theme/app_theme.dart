@@ -14,6 +14,12 @@ class AppTheme{
     ),
     appBarTheme: const AppBarTheme(
       color: AppColor.mainPurpleColor,
-    )
+    ),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(AppColor.mainPurpleColor),
+      )
+  ),
+    
   );
 }

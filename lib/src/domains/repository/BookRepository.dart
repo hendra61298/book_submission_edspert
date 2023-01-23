@@ -1,6 +1,7 @@
 
 
 import 'package:book_submission_edspert/src/domains/entities/book/book.dart';
+import 'package:book_submission_edspert/src/domains/entities/book/detail_book.dart';
 
 import '../../data/result.dart';
 
@@ -13,5 +14,5 @@ abstract class BookRepository{
   Future<Result<List<Book>>> getBookWithSearch(String name);
 
   /// Get All Search Book
-  Future<Result<Book>> getDetailBook(String isbn13);
+  Future<Result<DetailBook>> getDetailBook(String isbn13);
 }
