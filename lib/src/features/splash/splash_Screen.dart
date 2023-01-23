@@ -1,6 +1,8 @@
 
 import 'dart:async';
 
+import 'package:book_submission_edspert/src/constant/assets_const.dart';
+import 'package:book_submission_edspert/src/constant/textConst.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
@@ -23,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
     /// Set display to fullscreen.
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
-    Timer(const Duration(seconds: 10), () {
+    Timer(const Duration(seconds: 3), () {
       if (mounted) {
         /// Reset display to normal.
         SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
@@ -42,7 +44,7 @@ class _SplashScreenState extends State<SplashScreen> {
       decoration: const BoxDecoration(
           image: DecorationImage(
               fit:BoxFit.fill ,
-              image: AssetImage('assets/background_purple.png',
+              image: AssetImage(AssetsConst.backgroundPath,
               )
           )
       ),
@@ -59,12 +61,12 @@ class _SplashScreenState extends State<SplashScreen> {
                   radius: 150,
                   child: Padding(
                     padding: EdgeInsets.all(30),
-                    child: Image(image: AssetImage('assets/logo.png')),
+                    child: Image(image: AssetImage(AssetsConst.logoPath)),
                   ),
                 ),
               ),
-              Text(
-                "Gramedia",
+              Text(TextConst.storeName
+                ,
                 style: TextStyle(
                     fontFamily: GoogleFonts.aBeeZee().fontFamily,
                     fontSize: 45,
@@ -83,7 +85,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 child:  Align(
                   alignment: Alignment.bottomRight,
                   child: Text(
-                      'Book Store',
+                      TextConst.storeType,
                       style: TextStyle(
                           fontFamily: GoogleFonts.aBeeZee().fontFamily,
                           fontSize: 35,
