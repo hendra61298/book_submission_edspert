@@ -2,7 +2,7 @@
 import 'dart:async';
 import 'dart:math';
 
-import 'package:book_submission_edspert/src/constant/textConst.dart';
+import 'package:book_submission_edspert/src/constant/text_const.dart';
 import 'package:book_submission_edspert/src/features/walkthrough/page/walkthrough_page_1.dart';
 import 'package:book_submission_edspert/src/features/walkthrough/page/walkthrough_page_2.dart';
 import 'package:book_submission_edspert/src/features/walkthrough/page/walkthrough_page_3.dart';

@@ -2,7 +2,7 @@
 import 'dart:async';
 
 import 'package:book_submission_edspert/src/constant/assets_const.dart';
-import 'package:book_submission_edspert/src/constant/textConst.dart';
+import 'package:book_submission_edspert/src/constant/text_const.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';

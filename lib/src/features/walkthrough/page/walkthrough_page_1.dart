@@ -4,7 +4,7 @@ import 'package:book_submission_edspert/src/constant/assets_const.dart';
 import 'package:book_submission_edspert/src/features/walkthrough/page/walkthrough_base_page.dart';
 import 'package:flutter/cupertino.dart';
 
-import '../../../constant/textConst.dart';
+import '../../../constant/text_const.dart';
 
 
 class WalkthroughPage1 extends StatelessWidget {
