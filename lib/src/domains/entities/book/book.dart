@@ -13,7 +13,7 @@ class Book with _$Book{
     required String isbn13,
     required String price,
     required String image,
-    required String url,
+    required Uri url,
   })= _Book;
 
   factory Book.fromJson(Map<String, dynamic> json) => _$BookFromJson(json);

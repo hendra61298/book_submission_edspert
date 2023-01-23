@@ -12,7 +12,7 @@ _$_Book _$$_BookFromJson(Map<String, dynamic> json) => _$_Book(
       isbn13: json['isbn13'] as String,
       price: json['price'] as String,
       image: json['image'] as String,
-      url: json['url'] as String,
+      url: Uri.parse(json['url'] as String),
     );
 
 Map<String, dynamic> _$$_BookToJson(_$_Book instance) => <String, dynamic>{
@@ -21,5 +21,5 @@ Map<String, dynamic> _$$_BookToJson(_$_Book instance) => <String, dynamic>{
       'isbn13': instance.isbn13,
       'price': instance.price,
       'image': instance.image,
-      'url': instance.url,
+      'url': instance.url.toString(),
     };

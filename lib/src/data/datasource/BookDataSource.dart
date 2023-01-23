@@ -14,7 +14,7 @@ class BookDataSource implements BookRepository{
   Future<Result<List<Book>>> getAllBook() async{
     var response = await dio.get(ApiUrlConst.getAllBookUrl);
 
-    Iterable dataParse = json.decode(response.data['books']);
+    Iterable dataParse = response.data['books'];
     List<Book> listBook = List<Book>.from(dataParse.map((e) => Book.fromJson(e)));
 
     return Result(

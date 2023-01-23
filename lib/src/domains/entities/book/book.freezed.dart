@@ -25,7 +25,7 @@ mixin _$Book {
   String get isbn13 => throw _privateConstructorUsedError;
   String get price => throw _privateConstructorUsedError;
   String get image => throw _privateConstructorUsedError;
-  String get url => throw _privateConstructorUsedError;
+  Uri get url => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -43,7 +43,7 @@ abstract class $BookCopyWith<$Res> {
       String isbn13,
       String price,
       String image,
-      String url});
+      Uri url});
 }
 
 /// @nodoc
@@ -90,7 +90,7 @@ class _$BookCopyWithImpl<$Res, $Val extends Book>
       url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
+              as Uri,
     ) as $Val);
   }
 }
@@ -107,7 +107,7 @@ abstract class _$$_BookCopyWith<$Res> implements $BookCopyWith<$Res> {
       String isbn13,
       String price,
       String image,
-      String url});
+      Uri url});
 }
 
 /// @nodoc
@@ -150,7 +150,7 @@ class __$$_BookCopyWithImpl<$Res> extends _$BookCopyWithImpl<$Res, _$_Book>
       url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
-              as String,
+              as Uri,
     ));
   }
 }
@@ -179,7 +179,7 @@ class _$_Book implements _Book {
   @override
   final String image;
   @override
-  final String url;
+  final Uri url;
 
   @override
   String toString() {
@@ -226,7 +226,7 @@ abstract class _Book implements Book {
       required final String isbn13,
       required final String price,
       required final String image,
-      required final String url}) = _$_Book;
+      required final Uri url}) = _$_Book;
 
   factory _Book.fromJson(Map<String, dynamic> json) = _$_Book.fromJson;
 
@@ -241,7 +241,7 @@ abstract class _Book implements Book {
   @override
   String get image;
   @override
-  String get url;
+  Uri get url;
   @override
   @JsonKey(ignore: true)
   _$$_BookCopyWith<_$_Book> get copyWith => throw _privateConstructorUsedError;

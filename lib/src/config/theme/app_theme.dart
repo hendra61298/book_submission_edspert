@@ -12,5 +12,8 @@ class AppTheme{
     progressIndicatorTheme: const ProgressIndicatorThemeData(
       color: AppColor.mainPurpleColor,
     ),
+    appBarTheme: const AppBarTheme(
+      color: AppColor.mainPurpleColor,
+    )
   );
 }

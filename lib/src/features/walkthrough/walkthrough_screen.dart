@@ -48,7 +48,7 @@ class _WalkthroughScreenState extends State<WalkthroughScreen> {
     Future.sync(() {
       Router.neglect(context, () {
         GoRouter.of(context).pushReplacement(
-            AppRoute.listScreen.path
+            AppRoute.listBookScreen.path
         );
       });
     });
