@@ -1,11 +1,8 @@
-import 'package:book_submission_edspert/src/app.dart';
 import 'package:book_submission_edspert/src/constant/text_const.dart';
 import 'package:book_submission_edspert/src/core/router/app_router_constant.dart';
 import 'package:book_submission_edspert/src/features/list_book/bloc/list_book_bloc.dart';
 import 'package:book_submission_edspert/src/features/list_book/bloc/list_book_state.dart';
 import 'package:book_submission_edspert/src/widgets/book_card.dart';
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';

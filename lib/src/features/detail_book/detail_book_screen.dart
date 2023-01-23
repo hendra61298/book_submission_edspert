@@ -85,7 +85,6 @@ class DetailBookScreen extends StatelessWidget {
                                 onPressed: (){
                                   ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Coming Soon"), backgroundColor: AppColor.mainPurpleColor,));
                                 },
-
                                 child: const Text('BUY'),
                             ),
                         ),
@@ -138,7 +137,16 @@ class DetailBookScreen extends StatelessWidget {
                                 scrollDirection: Axis.horizontal,
                                 itemCount: state.listBook.length,
                                 itemBuilder: (context ,index){
-                                    return CachedNetworkImage(imageUrl: state.listBook[index].image);
+                                    return GestureDetector(
+                                        onTap: (){
+                                          GoRouter.of(context).pushReplacementNamed(
+                                            AppRoute.detailBookScreen.name,
+                                            params: {
+                                              'isbn13': state.listBook[index].isbn13
+                                            }
+                                          );
+                                        },
+                                        child: CachedNetworkImage(imageUrl: state.listBook[index].image));
                                 }
                             ),
                           ),
